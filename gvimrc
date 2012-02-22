@@ -1,4 +1,4 @@
-colorscheme habilight
+colorscheme solarized
 if has("gui_macvim")
     " Command-T for CommandT
     macmenu &File.New\ Tab key=<D-T>
