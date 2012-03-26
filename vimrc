@@ -118,6 +118,7 @@ let g:CommandTMaxHeight=20
 
 " Syntax for GLSL
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set filetype=glsl
+au BufNewFile,BufRead *.pc set filetype=cpp
 au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
 
 " make uses real tabs
@@ -126,4 +127,20 @@ au FileType make set noexpandtab
 " json syntax highlight
 au BufNewfile,BufRead *.json set ft=javascript
 
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+au BufWritePost vimrc so ~/.vimrc
+
+" open last buffer
+noremap <Leader><Leader> <C-^>
+
+" absolute line numbers in insert, relative otherwise
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+
+" command line editing shortcuts
+cnoremap <C-j> <t_kd>
+cnoremap <C-k> <t_ku>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
 
