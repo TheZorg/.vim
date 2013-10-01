@@ -144,3 +144,5 @@ cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
+" omni complete shortcut
+inoremap <C-space> <C-x><C-o>
