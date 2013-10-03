@@ -112,6 +112,9 @@ let g:Powerline_symbols = 'fancy'
 " Clang-complete options
 let g:clang_auto_select=1
 let g:clang_complete_copen=1
+let g:clang_user_options='|| exit 0'
+let g:clang_close_preview=1
+set completeopt-=preview
 
 " Cmd-T options
 let g:CommandTMaxHeight=20
