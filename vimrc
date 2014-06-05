@@ -1,4 +1,6 @@
 " Setup pathogen
+let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'clang_complete')
 filetype off
 call pathogen#runtime_append_all_bundles()
 
@@ -148,4 +150,5 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
 " omni complete shortcut
-inoremap <C-space> <C-x><C-o>
+"inoremap <C-space> <C-x><C-o>
+"inoremap <C-@> <C-space>

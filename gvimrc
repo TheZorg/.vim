@@ -1,4 +1,8 @@
 colorscheme solarized
+set bg=dark
+let g:solarized_contrast = "high"
+let g:solarized_visibility = "low"
+
 if has("gui_macvim")
     " Command-T for CommandT
     macmenu &File.New\ Tab key=<D-T>
@@ -14,6 +18,9 @@ if has("gui_macvim")
 
     " Change default font
     set gfn=Inconsolata-dz\ for\ Powerline:h11
+elseif has("gui_gtk2")
+    " Change default font
+    set gfn=Inconsolata-dz\ for\ Powerline\ 11
 endif
 
 " Project Tree
