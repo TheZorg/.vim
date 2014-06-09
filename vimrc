@@ -11,6 +11,7 @@ set modelines=0
 filetype plugin indent on
 set history=1000
 set autowrite " Saves before commands like :make
+set encoding=utf-8
 
 " Whitespace
 set nowrap
@@ -109,6 +110,10 @@ noremap <c-up> :call <SID>swap_up()<CR>
 noremap <c-down> :call <SID>swap_down()<CR>
 
 " Fancy symbols for Powerline
+python from powerline.vim import setup as powerline_setup
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+python powerline_setup()
+python del powerline_setup
 let g:Powerline_symbols = 'fancy'
 
 " Clang-complete options
