@@ -1,6 +1,4 @@
 " Setup pathogen
-let g:pathogen_disabled = []
-call add(g:pathogen_disabled, 'clang_complete')
 filetype off
 call pathogen#runtime_append_all_bundles()
 
@@ -110,18 +108,11 @@ noremap <c-up> :call <SID>swap_up()<CR>
 noremap <c-down> :call <SID>swap_down()<CR>
 
 " Fancy symbols for Powerline
+source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 python from powerline.vim import setup as powerline_setup
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 python powerline_setup()
 python del powerline_setup
 let g:Powerline_symbols = 'fancy'
-
-" Clang-complete options
-let g:clang_auto_select=1
-let g:clang_complete_copen=1
-let g:clang_user_options='|| exit 0'
-let g:clang_close_preview=1
-set completeopt-=preview
 
 " Cmd-T options
 let g:CommandTMaxHeight=20
